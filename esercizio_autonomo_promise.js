@@ -55,7 +55,7 @@ const promessa2= function (input) {
     return p;
 }
 
-promessa1(2, 6)
+/*promessa1(2, 6)
     .then( 
         (output1) => {
         return promessa2(output1)
@@ -64,4 +64,12 @@ promessa1(2, 6)
         (e) => {
             console.log(e)
         }
-    )
+    )*/
+
+async function asincronia(){
+    const output1 = await promessa1(30, 60)
+    const output2 = await promessa2(output1)
+    return output2
+}
+
+asincronia()
